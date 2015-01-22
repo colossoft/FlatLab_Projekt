@@ -50,7 +50,7 @@
 				//this.trigger.addEventListener( 'mouseout', function(ev) { self._closeIconMenu(); } );
 				self._openIconMenu();
 
-				this.menu.addEventListener( 'click', function(ev) {
+				this.menu.addEventListener( 'mouseover', function(ev) {
 					self._openMenu(); 
 					document.addEventListener( self.bodyEventtype, self.bodyClickFn ); 
 				} );
