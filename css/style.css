@@ -206,6 +206,10 @@ a, a:hover, a:focus {
     color: white;
 }
 
+.gn-menu li > a.active {
+    background: #5f6f81;
+    color: white;
+}
 
 .no-touch .gn-menu-main a:hover {
         background: #5f6f81;
