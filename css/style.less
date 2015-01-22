@@ -8,6 +8,14 @@ Website: http://thevectorlab.net/
 /* Import fonts */
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
 
+/* ----- GLOBAL COLOR VARIABLES -----  */
+@user-widget-panel-heading-green: #99C262;
+@user-widget-panel-heading-blue: #21BEFC;
+@user-widget-panel-used-holiday-label-color: #F58426;
+@user-widget-panel-free-holiday-label-color: #3CB521;
+
+
+
 body {
     color: #797979;
     background: #f1f2f7;
@@ -2071,6 +2079,15 @@ ul.labels-info li a i {
     padding-right: 10px;
 }
 
+.nav.nav-pills.nav-stacked > li > a {
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.nav.nav-pills.nav-stacked > li > a > img {
+    margin-right: 8px;
+}
+
 .nav.nav-pills.nav-stacked.labels-info p {
     margin-bottom: 0;
     padding: 0 22px;
@@ -2356,7 +2373,7 @@ ul.inbox-pagination li {
     color: #fff;
     border-radius: 4px 4px 0 0;
     -webkit-border-radius: 4px 4px 0 0;
-    padding: 30px;
+    padding: 5px 10px;
     text-align: center;
 }
 
@@ -2375,13 +2392,15 @@ ul.inbox-pagination li {
 }
 
 .profile-nav .user-heading h1 {
-    font-size: 22px;
-    font-weight: 300;
-    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px 0 3px 0;
 }
 
 .profile-nav .user-heading p {
     font-size: 12px;
+    font-weight: 0;
+    margin: 0;
 }
 
 .profile-nav ul {
@@ -2423,10 +2442,24 @@ ul.inbox-pagination li {
 }
 
 .r-activity {
-    margin: 6px 0 0;
+    margin: 6px 0 0 0;
     font-size: 12px;
 }
 
+.label-used-holiday {
+    font-size: 14px;
+    background-color: @user-widget-panel-used-holiday-label-color;
+    margin-right: 5px;
+    padding: 4px 1px;
+    min-width: 15px;
+}
+
+.label-free-holiday {
+    font-size: 14px;
+    background-color: @user-widget-panel-free-holiday-label-color;
+    padding: 4px 1px;
+    min-width: 15px;
+}
 
 .p-text-area, .p-text-area:focus {
     border: none;
@@ -3749,25 +3782,32 @@ table.sliders tr td {
 }
 
 .alt.green-bg {
-    background: #aec785;
+    background: @user-widget-panel-heading-green;
+}
+
+.alt.blue-bg {
+    background: @user-widget-panel-heading-blue;
 }
 
 .profile-nav.alt.green-border ul > li > a:hover, .profile-nav.alt.green-border ul > li > a:focus, .profile-nav.alt.green-border ul li.active a {
-    border-left: 5px solid #aec785;
+    border-left: 5px solid @user-widget-panel-heading-green;
+}
+
+.profile-nav.alt.blue-border ul > li > a:hover, .profile-nav.alt.blue-border ul > li > a:focus, .profile-nav.alt.blue-border ul li.active a {
+    border-left: 5px solid @user-widget-panel-heading-blue;
 }
 
 .user-heading.alt a {
     float: left;
-    margin-right: 15px;
-    margin-left: -10px;
+    margin-right: 20px;
     display: inline-block;
-    border: 5px solid rgba(255, 255, 255, 0.3);
+    border: 3px solid rgba(255, 255, 255, 0.3);
     border-radius: 50%;
     -webkit-border-radius: 50%;
 }
 .user-heading.alt a img{
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     -webkit-border-radius: 50%;
 }

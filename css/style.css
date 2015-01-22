@@ -6,6 +6,7 @@ Author: Mosaddek Hossain
 Website: http://thevectorlab.net/
 */
 /* Import fonts */
+/* ----- GLOBAL COLOR VARIABLES -----  */
 body {
   color: #797979;
   background: #f1f2f7;
@@ -1755,6 +1756,13 @@ ul.labels-info li a:focus {
 ul.labels-info li a i {
   padding-right: 10px;
 }
+.nav.nav-pills.nav-stacked > li > a {
+  padding: 5px 10px;
+  font-size: 14px;
+}
+.nav.nav-pills.nav-stacked > li > a > img {
+  margin-right: 8px;
+}
 .nav.nav-pills.nav-stacked.labels-info p {
   margin-bottom: 0;
   padding: 0 22px;
@@ -1999,7 +2007,7 @@ ul.inbox-pagination li {
   color: #fff;
   border-radius: 4px 4px 0 0;
   -webkit-border-radius: 4px 4px 0 0;
-  padding: 30px;
+  padding: 5px 10px;
   text-align: center;
 }
 .profile-nav .user-heading.round a {
@@ -2015,12 +2023,14 @@ ul.inbox-pagination li {
   -webkit-border-radius: 50%;
 }
 .profile-nav .user-heading h1 {
-  font-size: 22px;
-  font-weight: 300;
-  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 5px 0 3px 0;
 }
 .profile-nav .user-heading p {
   font-size: 12px;
+  font-weight: 0;
+  margin: 0;
 }
 .profile-nav ul {
   margin-top: 1px;
@@ -2056,8 +2066,21 @@ ul.inbox-pagination li {
   color: #bcb3aa;
 }
 .r-activity {
-  margin: 6px 0 0;
+  margin: 6px 0 0 0;
   font-size: 12px;
+}
+.label-used-holiday {
+  font-size: 14px;
+  background-color: #f58426;
+  margin-right: 5px;
+  padding: 4px 1px;
+  min-width: 15px;
+}
+.label-free-holiday {
+  font-size: 14px;
+  background-color: #3cb521;
+  padding: 4px 1px;
+  min-width: 15px;
 }
 .p-text-area,
 .p-text-area:focus {
@@ -3256,25 +3279,32 @@ table.sliders tr td {
   text-align: left;
 }
 .alt.green-bg {
-  background: #aec785;
+  background: #99c262;
+}
+.alt.blue-bg {
+  background: #21befc;
 }
 .profile-nav.alt.green-border ul > li > a:hover,
 .profile-nav.alt.green-border ul > li > a:focus,
 .profile-nav.alt.green-border ul li.active a {
-  border-left: 5px solid #aec785;
+  border-left: 5px solid #99c262;
+}
+.profile-nav.alt.blue-border ul > li > a:hover,
+.profile-nav.alt.blue-border ul > li > a:focus,
+.profile-nav.alt.blue-border ul li.active a {
+  border-left: 5px solid #21befc;
 }
 .user-heading.alt a {
   float: left;
-  margin-right: 15px;
-  margin-left: -10px;
+  margin-right: 20px;
   display: inline-block;
-  border: 5px solid rgba(255, 255, 255, 0.3);
+  border: 3px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
   -webkit-border-radius: 50%;
 }
 .user-heading.alt a img {
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   -webkit-border-radius: 50%;
 }
