@@ -1,0 +1,15 @@
+   #timeAgo {
+        background: #E8403F;
+        border-radius:25px;
+        color:white;
+        padding: 4px 12px;
+    }
+
+    .feedTable  tr  td {
+        border-top:0!important
+    }
+
+    .feedTable  tr  td:nth-child(2) {
+        width:60%;  
+        max-width:250px;
+    }

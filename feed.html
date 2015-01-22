@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript" src="http://getbootstrap.com/dist/js/bootstrap.js"></script>
+    <link type="text/css" rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.css"/>
+    <link type="text/css" rel="stylesheet" href="css/feed.css"/>
+    <link type="text/css" rel="stylesheet" href="css/overflowText.css"/>
+        <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+        <link href="assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css" media="screen"/>
+    <title>HTML5, CSS3 and JavaScript demo</title>
+</head>
+<body style="background-color:#ddd;">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <br>
+        <h3>This is the feed</h3>
+        <br>
+            <div class="panel">
+                <div class="panel-heading" style="border-bottom:1px solid #dddddd;">
+                    <h4 style="color:gray;">Latest activity related to your things</h4>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-hover feedTable">
+                        <tr>
+                            <td>1.</td>
+                            <td>
+                                <!-- az elso div a popover-hez kell csak; ha nincs popover torolheto -->
+                                <div popover="{{item.event}}" popover-trigger="{{{true: 'mouseenter', false: 'never'}[item.event.length>20]}}" data-container="body" data-toggle="popover">
+                                    <!-- a masodik div akkor kell, ha esetleg tul hosszu szöveg kerulne a cellaba, ez csinalja a szoveg vegen a ...-ot -->
+                                    <div class="overflowText">
+                                        <text>You got a cookie!</text>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td>
+                                <div class="pull-right" popover="{{item.date | date:'dd/MM/yyyy HH:mm'}}" popover-trigger="mouseenter">
+                                    <label id="timeAgo" class="btn label-danger">10 minutes ago</label>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>2.</td>
+                            <td>
+                                <div popover="{{item.event}}" popover-trigger="{{{true: 'mouseenter', false: 'never'}[item.event.length>20]}}" data-container="body" data-toggle="popover">
+                                    <div class="overflowText">
+                                        <text>You got a cookie!</text>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td>
+                                <div class="pull-right" popover="{{item.date | date:'dd/MM/yyyy HH:mm'}}" popover-trigger="mouseenter">
+                                    <label id="timeAgo" class="btn label-danger">2 hours ago</label>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>3.</td>
+                            <td>
+                                <div popover="{{item.event}}" popover-trigger="{{{true: 'mouseenter', false: 'never'}[item.event.length>20]}}" data-container="body" data-toggle="popover">
+                                    <div class="overflowText">
+                                        <text>You got a cookie!</text>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td>
+                                <div class="pull-right" popover="{{item.date | date:'dd/MM/yyyy HH:mm'}}" popover-trigger="mouseenter">
+                                    <label id="timeAgo" class="btn label-danger">yesterday</label>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+    </div>                    
+</body>
+</html>
