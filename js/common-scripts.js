@@ -5,9 +5,10 @@ $(function() {
         autoClose: true,
         saveState: true,
         disableLink: true,
-        speed: 'slow',
+        speed: 'fast',
         showCount: false,
         autoExpand: true,
+        hoverDelay: 900, 
 //        cookie: 'dcjq-accordion-1',
         classExpand: 'dcjq-current-parent'
     });
@@ -50,6 +51,10 @@ var Script = function () {
         $(window).on('resize', responsiveView);
     });
 
+    $("#sidebar > .sidebar-scroller > .sidebar-menu > .sub-menu").click(function() {
+        $("#sidebar").removeClass("sidebar-just-icons");
+    });
+
     $('.fa-bars').click(function () {
         if ($('#sidebar > ul').is(":visible") === true) {
             $('#main-content').css({
@@ -72,8 +77,19 @@ var Script = function () {
         }
     });
 
+    $(".gn-submenu-point").bind('click', function(event) {
+        if($(".gn-menu-wrapper").hasClass("gn-open-all")) {
+            $(this).find("ul.gn-submenu").slideToggle();
+        } else {
+            $(this).find("ul.gn-submenu").toggle();
+        }
+        
+        $(this).find("a.fa > span.arrow").toggleClass("up");
+        $(this).find("a.fa > span.arrow").toggleClass("down");
+    });
+
 // custom scrollbar
-    $("#sidebar").niceScroll({styler:"fb",cursorcolor:"#e8403f", cursorwidth: '3', cursorborderradius: '10px', background: '#404040', spacebarenabled:false, cursorborder: ''});
+    $(".gn-scroller").niceScroll({styler:"fb",cursorcolor:"#e8403f", cursorwidth: '3', cursorborderradius: '10px', background: '#404040', spacebarenabled:false, cursorborder: '', horizrailenabled: false });
 
     $("html").niceScroll({styler:"fb",cursorcolor:"#e8403f", cursorwidth: '6', cursorborderradius: '10px', background: '#404040', spacebarenabled:false,  cursorborder: '', zindex: '1000'});
 

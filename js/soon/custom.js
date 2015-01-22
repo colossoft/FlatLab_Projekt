@@ -132,3 +132,4 @@ PROGRESS BAR
         $('#bar-container').slideToggle(); 
     });
 })(jQuery);
+
