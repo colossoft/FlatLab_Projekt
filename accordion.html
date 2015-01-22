@@ -5,25 +5,27 @@
 <script type="text/javascript" src="http://getbootstrap.com/dist/js/bootstrap.js"></script>
 <link type="text/css" rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.css"/>
 <link type="text/css" rel="stylesheet" href="css/accordion.css"/>
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css" media="screen"/>
 <title>HTML5, CSS3 and JavaScript demo</title>
 </head>
 <body>
  <div class="panel-group accordion-panel-group col-lg-12 col-md-12 col-sm-12 col-xs-12 whiteBackground" id="accordion">
  
  <!-- first accordion -->
-            <div class="panel accordion-panel panel-primary" is-open="status.open1">
+            <div class="accordion-panel panel panel-primary" is-open="status.open1">
                 <div class="panel-heading collapseDiv">
                     <h4 class="panel-title">
-                        <a data-toggle="collapse" href="#accordionOne" ng-click="status.open1 = !status.open1">
-                            <div style="width:100%">
-                                <i class="glyphicon" ng-class="{'glyphicon-chevron-up iconUp': status.open1, 'glyphicon-chevron-down iconDown': !status.open1}"></i>
+                        <a data-toggle="collapse" href="#accordionOne" ng-click="status.open1 = !status.open1" class="accordion-dropDown">
+                            <div class="accordion-titleContainer">
+                                <i class="fa" ng-class="{'fa-angle-up iconUp': status.open1, 'fa-angle-down iconDown': !status.open1}"></i>
                                 Title #1
                             </div>
                         </a>
                     </h4>
                 </div>
                 <div id="accordionOne" class="panel-collapse collapse">
-                    <div class="panel-body" style="width:100%!important;">
+                    <div class="panel-body">
                        Content goes here
                     </div>
                 </div>
@@ -34,9 +36,9 @@
             <div class="panel panel-primary" is-open="status.open2">
                 <div class="panel-heading collapseDiv">
                     <h4 class="panel-title">
-                        <a data-toggle="collapse" href="#accordionTwo" ng-click="status.open2 = !status.open2">
-                            <div style="width:100%">
-                                <i class="glyphicon" ng-class="{'glyphicon-chevron-up iconUp': status.open2, 'glyphicon-chevron-down iconDown': !status.open2}"></i>
+                        <a data-toggle="collapse" href="#accordionTwo" ng-click="status.open2 = !status.open2" class="accordion-dropDown">
+                            <div class="accordion-titleContainer">
+                                <i class="fa" ng-class="{'fa-angle-up iconUp': status.open2, 'fa-angle-down iconDown': !status.open2}"></i>
                                 Title #2
                             </div>
                         </a>
