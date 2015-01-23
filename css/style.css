@@ -1756,7 +1756,29 @@ ul.labels-info li a:focus {
 ul.labels-info li a i {
   padding-right: 10px;
 }
+.panel.user-profile {
+  border-radius: 2px;
+  border: solid 1px #ccc;
+}
+.panel.user-profile .profile-img {
+  border: solid 10px #99c262;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.panel.user-profile .profile-img > img {
+  border-radius: 50%;
+  width: 150px;
+}
+.nav.nav-pills.nav-stacked > h4 {
+  color: grey;
+  margin: 0 0 5px 10px;
+  font-weight: bold;
+}
+.nav.nav-pills.nav-stacked > p {
+  margin: 0 0 5px 10px;
+}
 .nav.nav-pills.nav-stacked > li > a {
+  color: grey;
   padding: 5px 10px;
   font-size: 14px;
 }
@@ -4932,4 +4954,13 @@ a.guest-on i {
   height: auto;
   width: 175px;
   margin-right: 10px;
+}
+.orange {
+  background: #F58426;
+}
+.blue {
+  background: #3DBEED;
+}
+.red {
+  background: #e56155;
 }

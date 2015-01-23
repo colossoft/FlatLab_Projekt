@@ -15,9 +15,9 @@ $(function() {
 });
 
 // right slidebar
-$(function(){
- $.slidebars();
-});
+//$(function(){
+// $.slidebars();
+//});
 
 var Script = function () {
 
@@ -83,7 +83,7 @@ var Script = function () {
         } else {
             $(this).find("ul.gn-submenu").toggle();
         }
-        
+
         $(this).find("a.fa > span.arrow").toggleClass("up");
         $(this).find("a.fa > span.arrow").toggleClass("down");
     });
