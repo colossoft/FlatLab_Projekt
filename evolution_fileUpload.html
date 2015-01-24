@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript" src="http://getbootstrap.com/dist/js/bootstrap.js"></script>
+    <link type="text/css" rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.css"/>
+        <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+        <link href="css/fileUpload.css" rel="stylesheet" />
+        <link href="assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css" media="screen"/>
+    <title>HTML5, CSS3 and JavaScript demo</title>
+</head>
+<body>
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >   
+        <h3>File upload button and table</h3>
+        <h5>Note: textarea will expand if you use the elastic directive</h5>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+        <!-- file feltolto gomb -->
+        <span class="btn btn-primary fileinput-button">
+            <i class="fa fa-plus"></i>
+            <span>Add new file</span>
+            <input type="file" multiple ng-file-select="onEventFileSelect($files)" accept=".doc,.docx,.bmp,.gif,.jpg,.jpeg,.jpe,.png,.pdf,.xls,.xlsx,.ppt,.pptx,.odt,.ott,.odm,.html,.oth,.ods,.ots,.odg,.otg,.odp,.otp,.odf,.odb,.sxw,.stw,.sxg,.sxc,.stc,.sxi,.sti,.sxd,.std,.sxm,.txt,.csv">
+        </span> 
+        <!-- eddig tart -->       
+    </div>
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <br>
+        <table class="table table-striped uploadTable">
+            <thead>
+                <tr>
+                    <th>File name</th>
+                    <th>Description of the file</th>
+                    <th>&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="maxLimitedPopover">  <!-- ez a class ad egy max szelesseget a popover-nek-->
+                        <div popover="" popover-trigger="{{{true: 'mouseenter', false: 'never'}[attachment.name.length>20]}}" data-container="body" data-toggle="popover">
+                            <div class="overflowText"> <!-- tul hosszu szoveg vegere ...-ot tesz-->
+                                <text>filename.extension</text>
+                            </div>
+                        </div>
+                    </td>
+                     <td>
+                        <div class="pull-left forWideTextarea">  <!-- balra igazit es megnoveli a div-et a textarea szamara-->
+                            <!-- az elastic directiva kotelezo ahhoz hogy autoresizable legyen -->
+                            <textarea class="uploadTextarea" maxlength="1000" ng-model="attachment.description" elastic></textarea>
+                        </div>
+                    </td>
+                    <td class="text-center">
+                        <button type="button" class="btn btn-sm btn-primary" >
+                            <span class="fa fa-download"></span>
+                            <!-- a gomb felirata kicsi es extra kicsi felbontason eltunik -->
+                            <text class="hidden-xs hidden-sm">Download / open</text>
+                        </button>
+                        <button type="button" class="btn btn-sm btn-danger">
+                            <span class="fa fa-times"></span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>                        
+</body>
+</html>

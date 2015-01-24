@@ -13,7 +13,11 @@ Website: http://thevectorlab.net/
 @user-widget-panel-heading-blue: #21BEFC;
 @user-widget-panel-used-holiday-label-color: #F58426;
 @user-widget-panel-free-holiday-label-color: #3CB521;
-
+@log-arrow-up-right-position-rate: 0;  /* to center: 108 px*/
+@modal-alert-header-bgcolor: #F58426;
+@modal-confirm-header-bgcolor: #3DBEED;
+@modal-error-header-bgcolor: #e56155;
+@popup-header-text-color: #ffffff;
 
 
 body {
@@ -660,7 +664,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
     width: 20px;
     height: 11px;
     position: absolute;
-    right: 20px;
+    right: @log-arrow-up-right-position-rate;
     top: -10px;
 }
 
@@ -5773,14 +5777,22 @@ a.guest-on i {
     margin-right: 10px;
 }
 
-.orange {
-    background: #F58426;
+.modal-alert {
+  background: @modal-alert-header-bgcolor;
+}
+.modal-confirm {
+  background: @modal-confirm-header-bgcolor;
+}
+.modal-error {
+  background: @modal-error-header-bgcolor;
 }
 
-.blue {
-background: #3DBEED;
+.popupHeaderTextColor{
+  color: @popup-header-text-color;
 }
 
-.red {
-    background: #e56155;
+.inputButton{
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
 }

@@ -1,0 +1,88 @@
+.state-overview .terques {
+background: #39B7AC;
+}
+.state-overview .lightTerques {
+background: #3FCBBE;
+}
+.state-overview .yellow {
+background: #F6BB43;
+}
+.state-overview .lightYellow {
+background: #FFcE55;
+}
+.state-overview .blue {
+background: #3DBEED;
+}
+.state-overview .lightBlue {
+background: #57C8F2;
+}
+.state-overview .green {
+background: #99C262;
+}
+.state-overview .lightGreen {
+background: #A9D96C;
+}
+.state-overview .lightRed {
+    background: #ff6c60;
+}
+.state-overview .red {
+    background: #e56155;
+}
+
+.state-overview .orange {
+    background: #F58426;
+}
+
+.state-overview .lightOrange {
+    background: #FAA35C;
+}
+.state-overview .symbol {
+width: 40%;
+padding: 40px 15px;/*25px 15px;*/
+-webkit-border-radius: 4px 0px 0px 4px;
+border-radius: 4px 0px 0px 4px;
+}
+.state-overview .symbol, .state-overview .value {
+display: inline-block;
+text-align: center;
+}
+.state-overview .symbol i {
+color: #fff;
+font-size: 35px/*50px;*/
+}
+.state-overview .value {
+width: 60%; /*58%*/
+padding-top: 21px;
+padding-bottom: 13.5px;  /*new*/
+}
+.state-overview .value {
+float: right;
+}
+.state-overview .symbol, .state-overview .value {
+display: inline-block;
+text-align: center;
+}
+.state-overview .value h1 {
+font-weight: 300;
+}
+.state-overview .value h1, .state-overview .value p {
+margin: 0;
+padding: 0;
+color: #ffffff;
+}
+
+.card-jumbo {
+  font-size: 4em;
+  text-align: center;
+}
+
+.card-text-dashboard {
+  font-size: 16px;
+  text-align: center;
+  padding-bottom: 1px !important;
+}
+
+.panelWithPadding {
+    padding-right: 7.5px;
+    padding-left: 7.5px;
+}   

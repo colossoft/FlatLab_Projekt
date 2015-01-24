@@ -4955,12 +4955,22 @@ a.guest-on i {
   width: 175px;
   margin-right: 10px;
 }
-.orange {
+.modal-alert {
   background: #F58426;
 }
-.blue {
+.modal-confirm {
   background: #3DBEED;
 }
-.red {
+.modal-error {
   background: #e56155;
+}
+
+.popupHeaderTextColor{
+  color:#ffffff;
+}
+
+.inputButton{
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
 }

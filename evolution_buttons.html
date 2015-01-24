@@ -3,14 +3,44 @@
 <head>
     <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
     <script type="text/javascript" src="http://getbootstrap.com/dist/js/bootstrap.js"></script>
-    <link type="text/css" rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.css"/>
-        <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-        <link href="assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css" media="screen"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-reset.css" rel="stylesheet">
+    <!--external css-->
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-responsive.css" rel="stylesheet" />
     <title>HTML5, CSS3 and JavaScript demo</title>
 </head>
 <body>
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 whiteBackground" >   
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >   
+        <h3>
+            Dropdown user with image
+        </h3>
+
+        <div class="dropdown btn btn-default">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                <img alt="" src="img/avatar1_small.jpg" class="img-circle">
+                <span class="username">Jhon Doue</span>
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu extended logout">
+                <div class="log-arrow-up"></div>
+                <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
+                <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
+                <li><a href="#"><i class="fa fa-bell-o"></i> Notification</a></li>
+                <li><a href="login.html"><i class="fa fa-key"></i> Log Out</a></li>
+            </ul>
+        </div>
+
+        <hr>
+    </div>
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >   
         <h3>
             Buttons with different sizes
         </h3>
@@ -46,7 +76,7 @@
         <hr>
     </div>
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 whiteBackground" >   
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >   
         <h3>
             Buttons with title and icon
         </h3>
@@ -95,7 +125,7 @@
         <hr>
     </div>
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 whiteBackground" >   
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >   
         <h3>
             Buttons with icon only
         </h3>
@@ -126,51 +156,129 @@
         <hr>
     </div>
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 whiteBackground" >   
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >   
         <h3>
             Formatted radio buttons
         </h3>
 
-        <div class="btn-row">
-            <div class="btn-group" data-toggle="buttons">
-                 <label class="btn btn-info">
-                     <input type="radio" name="options" id="option1"> Option 1
-                 </label>
-                 <label class="btn btn-info">
-                    <input type="radio" name="options" id="option2"> Option 2
-                </label>
-                <label class="btn btn-info">
-                    <input type="radio" name="options" id="option3"> Option 3
-                 </label>
+        <!-- horizontal radio buttons -->
+        <div>
+            <div class="btn-row">
+                <div class="btn-group" data-toggle="buttons">
+                     <label class="btn btn-info">
+                         <input type="radio" name="optionsH" id="option1"> Option 1
+                     </label>
+                     <label class="btn btn-info">
+                        <input type="radio" name="optionsH" id="option2"> Option 2
+                    </label>
+                    <label class="btn btn-info">
+                        <input type="radio" name="optionsH" id="option3"> Option 3
+                     </label>
+                </div>
             </div>
+        </div> 
+
+        <!-- vertical radio buttons -->
+        <div>
+            <table>
+                <tr>
+                    <td>
+                        <label class="btn btn-info">
+                            <input type="radio" name="optionsV" id="option1" class="inputButton"> 1
+                        </label>
+                    </td>
+                    <td>
+                        <text>Option 1</text>
+                    </td>
+                </tr>
+                <tr>
+                    <td data-toggle="buttons">
+                        <label class="btn btn-info">
+                            <input type="radio" name="optionsV" id="option2" class="inputButton"> 2
+                        </label>
+                    </td>
+                    <td>
+                        <text>Option 2</text>
+                    </td>                
+                </tr>
+                <tr>
+                    <td data-toggle="buttons">
+                        <label class="btn btn-info">
+                            <input type="radio" name="optionsV" id="option3" class="inputButton"> 3
+                        </label>
+                    </td>
+                    <td>
+                        <text>Option 3</text>
+                    </td>                                                
+                </tr>
+            </table>
         </div> 
 
         <hr>
     </div>
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 whiteBackground" >   
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >   
         <h3>
             Formatted checkbox buttons
         </h3>
 
-        <div class="btn-row">
-            <div class="btn-group" data-toggle="buttons">
-                <label class="btn btn-warning">
-                    <input type="checkbox"> Option 1
-                </label>
-                <label class="btn btn-warning">
-                    <input type="checkbox"> Option 2
-                </label>
-                <label class="btn btn-warning">
-                    <input type="checkbox"> Option 3
-                </label>
-            </div>
+        <!-- horizontal radio buttons -->
+        <div>
+            <div class="btn-row">
+                <div class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-warning">
+                        <input type="checkbox"> Option 1
+                    </label>
+                    <label class="btn btn-warning">
+                        <input type="checkbox"> Option 2
+                    </label>
+                    <label class="btn btn-warning">
+                        <input type="checkbox"> Option 3
+                    </label>
+                </div>
+            </div> 
+        </div>
+
+        <!-- vertical radio buttons -->
+        <div>
+            <table>
+                <tr>
+                    <td>
+                        <label class="btn btn-warning">
+                            <input type="checkbox" class="inputButton"> 1
+                        </label>
+                    </td>
+                    <td>
+                        <text>Option 1</text>
+                    </td>
+                </tr>
+                <tr>
+                    <td data-toggle="buttons">
+                        <label class="btn btn-warning">
+                            <input type="checkbox" class="inputButton"> 2
+                        </label>
+                    </td>
+                    <td>
+                        <text>Option 2</text>
+                    </td>                
+                </tr>
+                <tr>
+                    <td data-toggle="buttons">
+                        <label class="btn btn-warning">
+                            <input type="checkbox" class="inputButton"> 3
+                        </label>
+                    </td>
+                    <td>
+                        <text>Option 3</text>
+                    </td>                                                
+                </tr>
+            </table>
         </div> 
 
         <hr>
     </div>
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 whiteBackground" >   
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >   
         <h3>
             Dropdown buttons
         </h3>
