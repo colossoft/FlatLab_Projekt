@@ -1,0 +1,66 @@
+        .buttonContainer { 
+            text-align: center; 
+            height: 50px;
+            padding: 0 !important;
+        }
+
+        .buttonStyle {
+            display: inline-block;
+            height: 50px !important;
+            padding: 0 !important;
+            white-space: normal !important;
+            font-size: 13px !important;
+            border-right: 1px solid lightgray;
+            outline:none!important;
+            border-radius: 0;
+        }
+
+        .buttonStyle:last-child { border-right: 0; }
+
+        .buttonStyle:hover { text-decoration: none; }
+        
+        .buttonStyle span {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .buttonStyle .img { padding: 0 5px 0 15px; }
+
+        .buttonStyle .img img {
+            max-width: 21px;
+            max-height: 21px;
+            vertical-align: middle;
+        }
+
+        .buttonStyle .title {
+            padding: 0 10px 0 5px;
+            text-align: left;
+        }
+
+        .disabledTab {
+            background-color: white;
+            color: gray;
+        }
+
+        .buttonStyle.disabledTab { color: gray; }
+
+        .activeTab, .activeTab:hover, .activeTab:focus, .activeTab:active, .activeTab.active {
+            color: #FFF;
+            background-color: #f58426;
+            border-color: #f58426;
+        }
+
+        .mobileButton {
+            height: 50px !important;
+            border-right: 1px solid lightgray;
+            border-radius: 0;
+        }
+
+        .mobileButton:last-child { border-right: 0; }
+
+        .mobileImageButton {
+            max-width: 21px;
+            max-height: 21px;
+            vertical-align: middle;
+            text-align: center;
+        }
