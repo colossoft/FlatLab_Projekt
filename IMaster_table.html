@@ -32,146 +32,180 @@
 	<![endif]-->
 </head>
 <body>
-	<div class="row">
-		<div class="col-sm-12">
-			<section class="panel">
-				<header class="panel-heading">
-					Dynamic Table
-					<span class="tools pull-right">
-						<a href="javascript:;" class="fa fa-chevron-down"></a>
-						<a href="javascript:;" class="fa fa-times"></a>
-					</span>
-				</header>
-				<div class="panel-body">
-					<div class="adv-table">
-						<div id="dynamic-table_wrapper" class="dataTables_wrapper form-inline" role="grid">
-							<!--<div class="row-fluid">
-								<div class="span6">
-								</div>
-								<div class="span6">
-									<div class="dataTables_filter" id="dynamic-table_filter">
-										<label>
-											Search: <input type="text" class="form-control" aria-controls="dynamic-table">
-										</label>
-									</div>
-								</div>
-							</div>-->
-							<table class="display table table-striped dataTable" id="dynamic-table" aria-describedby="dynamic-table_info">
-								<thead>
-									<tr role="row">
-										<th class="sorting center" role="columnheader" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" aria-label="Rendering engine: activate to sort column ascending" style="width: 335px;">Rendering engine</th>
-										<th class="sorting center" role="columnheader" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 448px;">Browser</th>
-										<th class="sorting center" role="columnheader" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 408px;">Platform(s)</th>
-										<th class="center sorting" role="columnheader" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 289px;">Date format</th>
-										<th class="center sorting_desc" role="columnheader" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" aria-sort="descending" aria-label="CSS grade: activate to sort column ascending" style="width: 209px;">Number format</th>
-									</tr>
-								</thead>
 
-								<tfoot>
-									<tr><th rowspan="1" colspan="1">Rendering engine</th><th rowspan="1" colspan="1">Browser</th><th rowspan="1" colspan="1">Platform(s)</th><th class="hidden-phone" rowspan="1" colspan="1">Engine version</th><th class="hidden-phone" rowspan="1" colspan="1">CSS grade</th></tr>
-								</tfoot>
-								<tbody role="alert" aria-live="polite" aria-relevant="all">
-									<tr class="gradeX odd">
-										<td class=" ">Trident</td>
-										<td class=" ">
-											Internet
-											Explorer 4.0
-										</td>
-										<td class=" ">Win 95+</td>
-										<td class="center">2014.01.23</td>
-										<td class="right">111</td>
-									</tr>
-									<tr class="gradeX even">
-										<td class=" ">Tasman</td>
-										<td class=" ">Internet Explorer 4.5</td>
-										<td class=" ">Mac OS 8-9</td>
-										<td class="center">2014.01.23</td>
-										<td class="right">112</td>
-									</tr>
-									<tr class="gradeX odd">
-										<td class=" ">Misc</td>
-										<td class=" ">Dillo 0.8</td>
-										<td class=" ">Embedded devices</td>
-										<td class="center">2014.01.23</td>
-										<td class="right">112</td>
-									</tr>
-									<tr class="gradeX even">
-										<td class=" ">Misc</td>
-										<td class=" ">Links</td>
-										<td class=" ">Text only</td>
-										<td class="center">2014.01.23</td>
-										<td class="right">112</td>
-									</tr>
-									<tr class="">
-										<td class=" ">Misc</td>
-										<td class=" ">Lynx</td>
-										<td class=" ">Text only</td>
-										<td class="center">2014.01.23</td>
-										<td class="right">112</td>
-									</tr>
-									<tr class="gradeU even">
-										<td class=" ">Other browsers</td>
-										<td class=" ">All others</td>
-										<td class=" ">-</td>
-										<td class="center">2014.01.23</td>
-										<td class="right">112</td>
-									</tr>
-									<tr class="gradeA odd">
-										<td class=" ">Presto</td>
-										<td class=" ">Nintendo DS browser</td>
-										<td class=" ">Nintendo DS</td>
-										<td class="center">2014.01.23</td>
-										<td class="right">112</td>
-									</tr>
-									<tr class="gradeC even">
-										<td class=" ">Trident</td>
-										<td class=" ">
-											Internet
-											Explorer 5.0
-										</td>
-										<td class=" ">Win 95+</td>
-										<td class="center">2014.01.23</td>
-										<td class="right">112</td>
-									</tr>
-									<tr class="gradeC odd">
-										<td class=" ">KHTML</td>
-										<td class=" ">Konqureror 3.1</td>
-										<td class=" ">KDE 3.1</td>
-										<td class="center">2014.01.23</td>
-										<td class="right">112</td>
-									</tr>
-									<tr class="gradeC even">
-										<td class=" ">Tasman</td>
-										<td class=" ">Internet Explorer 5.1</td>
-										<td class=" ">Mac OS 7.6-9</td>
-										<td class="center">2014.01.23</td>
-										<td class="right">112</td>
-									</tr>
-								</tbody>
-							</table>
-							<div class="row-fluid">
-								<div class="span6">
-									<div id="dynamic-table_length" class="dataTables_length">
-										<label>
-											<select class="form-control" size="1" name="dynamic-table_length" aria-controls="dynamic-table">
-												<option value="10" selected="selected">10</option>
-												<option value="25">25</option>
-												<option value="50">50</option>
-												<option value="100">100</option>
-											</select> records per page
-										</label>
-									</div>
-								</div>
-								<div class="span6">
-									<div class="dataTables_paginate paging_bootstrap pagination"><ul><li class="prev disabled"><a href="#">← Previous</a></li><li class="active"><a href="#">1</a></li><li><a href="#">2</a></li><li><a href="#">3</a></li><li><a href="#">4</a></li><li><a href="#">5</a></li><li class="next"><a href="#">Next → </a></li></ul></div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-		</div>
-	</div>
+	<div class="row">
+                  <div class="col-lg-12">
+                      <section class="panel">
+                          <header class="panel-heading">
+                              No More Tables
+                          </header>
+                          <div class="panel-body">
+                              <section id="no-more-tables">
+                                  <table class="table table-striped table-condensed cf">
+                                      <thead class="cf">
+                                      <tr>
+                                          <th>Code</th>
+                                          <th>Company</th>
+                                          <th class="numeric">Price</th>
+                                          <th class="numeric">Change</th>
+                                          <th class="numeric">Change %</th>
+                                          <th class="numeric">Open</th>
+                                          <th class="numeric">High</th>
+                                          <th class="numeric">Low</th>
+                                          <th class="numeric">Volume</th>
+                                      </tr>
+                                      </thead>
+                                      <tbody>
+                                      <tr>
+                                          <td data-title="Code">AAC</td>
+                                          <td data-title="Company">AUSTRALIAN AGRICULTURAL COMPANY LIMITED.</td>
+                                          <td class="numeric" data-title="Price">$1.38</td>
+                                          <td class="numeric" data-title="Change">-0.01</td>
+                                          <td class="numeric" data-title="Change %">-0.36%</td>
+                                          <td class="numeric" data-title="Open">$1.39</td>
+                                          <td class="numeric" data-title="High">$1.39</td>
+                                          <td class="numeric" data-title="Low">$1.38</td>
+                                          <td class="numeric" data-title="Volume">9,395</td>
+                                      </tr>
+                                      <tr>
+                                          <td data-title="Code">AAD</td>
+                                          <td data-title="Company">ARDENT LEISURE GROUP</td>
+                                          <td class="numeric" data-title="Price">$1.15</td>
+                                          <td class="numeric" data-title="Change">  +0.02</td>
+                                          <td class="numeric" data-title="Change %">1.32%</td>
+                                          <td class="numeric" data-title="Open">$1.14</td>
+                                          <td class="numeric" data-title="High">$1.15</td>
+                                          <td class="numeric" data-title="Low">$1.13</td>
+                                          <td class="numeric" data-title="Volume">56,431</td>
+                                      </tr>
+                                      <tr>
+                                          <td data-title="Code">AAX</td>
+                                          <td data-title="Company">AUSENCO LIMITED</td>
+                                          <td class="numeric" data-title="Price">$4.00</td>
+                                          <td class="numeric" data-title="Change">-0.04</td>
+                                          <td class="numeric" data-title="Change %">-0.99%</td>
+                                          <td class="numeric" data-title="Open">$4.01</td>
+                                          <td class="numeric" data-title="High">$4.05</td>
+                                          <td class="numeric" data-title="Low">$4.00</td>
+                                          <td class="numeric" data-title="Volume">90,641</td>
+                                      </tr>
+                                      <tr>
+                                          <td data-title="Code">ABC</td>
+                                          <td data-title="Company">ADELAIDE BRIGHTON LIMITED</td>
+                                          <td class="numeric" data-title="Price">$3.00</td>
+                                          <td class="numeric" data-title="Change">  +0.06</td>
+                                          <td class="numeric" data-title="Change %">2.04%</td>
+                                          <td class="numeric" data-title="Open">$2.98</td>
+                                          <td class="numeric" data-title="High">$3.00</td>
+                                          <td class="numeric" data-title="Low">$2.96</td>
+                                          <td class="numeric" data-title="Volume">862,518</td>
+                                      </tr>
+                                      <tr>
+                                          <td data-title="Code">ABP</td>
+                                          <td data-title="Company">ABACUS PROPERTY GROUP</td>
+                                          <td class="numeric" data-title="Price">$1.91</td>
+                                          <td class="numeric" data-title="Change">0.00</td>
+                                          <td class="numeric" data-title="Change %">0.00%</td>
+                                          <td class="numeric" data-title="Open">$1.92</td>
+                                          <td class="numeric" data-title="High">$1.93</td>
+                                          <td class="numeric" data-title="Low">$1.90</td>
+                                          <td class="numeric" data-title="Volume">595,701</td>
+                                      </tr>
+                                      <tr>
+                                          <td data-title="Code">ABY</td>
+                                          <td data-title="Company">ADITYA BIRLA MINERALS LIMITED</td>
+                                          <td class="numeric" data-title="Price">$0.77</td>
+                                          <td class="numeric" data-title="Change">  +0.02</td>
+                                          <td class="numeric" data-title="Change %">2.00%</td>
+                                          <td class="numeric" data-title="Open">$0.76</td>
+                                          <td class="numeric" data-title="High">$0.77</td>
+                                          <td class="numeric" data-title="Low">$0.76</td>
+                                          <td class="numeric" data-title="Volume">54,567</td>
+                                      </tr>
+                                      <tr>
+                                          <td data-title="Code">ACR</td>
+                                          <td data-title="Company">ACRUX LIMITED</td>
+                                          <td class="numeric" data-title="Price">$3.71</td>
+                                          <td class="numeric" data-title="Change">  +0.01</td>
+                                          <td class="numeric" data-title="Change %">0.14%</td>
+                                          <td class="numeric" data-title="Open">$3.70</td>
+                                          <td class="numeric" data-title="High">$3.72</td>
+                                          <td class="numeric" data-title="Low">$3.68</td>
+                                          <td class="numeric" data-title="Volume">191,373</td>
+                                      </tr>
+                                      <tr>
+                                          <td data-title="Code">ADU</td>
+                                          <td data-title="Company">ADAMUS RESOURCES LIMITED</td>
+                                          <td class="numeric" data-title="Price">$0.72</td>
+                                          <td class="numeric" data-title="Change">0.00</td>
+                                          <td class="numeric" data-title="Change %">0.00%</td>
+                                          <td class="numeric" data-title="Open">$0.73</td>
+                                          <td class="numeric" data-title="High">$0.74</td>
+                                          <td class="numeric" data-title="Low">$0.72</td>
+                                          <td class="numeric" data-title="Volume">8,602,291</td>
+                                      </tr>
+                                      <tr>
+                                          <td data-title="Code">AGG</td>
+                                          <td data-title="Company">ANGLOGOLD ASHANTI LIMITED</td>
+                                          <td class="numeric" data-title="Price">$7.81</td>
+                                          <td class="numeric" data-title="Change">-0.22</td>
+                                          <td class="numeric" data-title="Change %">-2.74%</td>
+                                          <td class="numeric" data-title="Open">$7.82</td>
+                                          <td class="numeric" data-title="High">$7.82</td>
+                                          <td class="numeric" data-title="Low">$7.81</td>
+                                          <td class="numeric" data-title="Volume">148</td>
+                                      </tr>
+                                      <tr>
+                                          <td data-title="Code">AGK</td>
+                                          <td data-title="Company">AGL ENERGY LIMITED</td>
+                                          <td class="numeric" data-title="Price">$13.82</td>
+                                          <td class="numeric" data-title="Change">  +0.02</td>
+                                          <td class="numeric" data-title="Change %">0.14%</td>
+                                          <td class="numeric" data-title="Open">$13.83</td>
+                                          <td class="numeric" data-title="High">$13.83</td>
+                                          <td class="numeric" data-title="Low">$13.67</td>
+                                          <td class="numeric" data-title="Volume">846,403</td>
+                                      </tr>
+                                      <tr>
+                                          <td data-title="Code">AGO</td>
+                                          <td data-title="Company">ATLAS IRON LIMITED</td>
+                                          <td class="numeric" data-title="Price">$3.17</td>
+                                          <td class="numeric" data-title="Change">-0.02</td>
+                                          <td class="numeric" data-title="Change %">-0.47%</td>
+                                          <td class="numeric" data-title="Open">$3.11</td>
+                                          <td class="numeric" data-title="High">$3.22</td>
+                                          <td class="numeric" data-title="Low">$3.10</td>
+                                          <td class="numeric" data-title="Volume">5,416,303</td>
+                                      </tr>
+                                      </tbody>
+                                      <tfoot>
+                                      	<tr>
+                                      		<td colspan="6">
+												<div class="pull-left">
+													<div class="dataTables_paginate paging_bootstrap pagination"><ul><li class="prev disabled"><a href="#">← Previous</a></li><li class="active"><a href="#">1</a></li><li><a href="#">2</a></li><li><a href="#">3</a></li><li><a href="#">4</a></li><li><a href="#">5</a></li><li class="next"><a href="#">Next → </a></li></ul></div>
+													</div>
+												</div>
+											</td>
+                                      		<td colspan="3">    
+												<div id="dynamic-table_length" class="dataTables_length">
+													<label>
+														<select class="form-control" size="1" name="dynamic-table_length" aria-controls="dynamic-table">
+															<option value="10" selected="selected">10</option>
+															<option value="25">25</option>
+															<option value="50">50</option>
+															<option value="100">100</option>
+														</select> records per page
+													</label>
+												</div>
+											</td>											
+                                      	</tr>
+                                      </tfoot>
+                                  </table>
+                              </section>
+                          </div>
+                      </section>
+                  </div>
+              </div>
 	<script src="js/jquery.js"></script>
 	<script src="js/jquery-ui-1.9.2.custom.min.js"></script>
 	<script src="js/jquery-migrate-1.2.1.min.js"></script>
